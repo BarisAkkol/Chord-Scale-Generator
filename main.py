@@ -54,7 +54,7 @@ def generate_chord():
       chord = ['Error']
   else:
       chord = ['Error']
-  chord_label.config(text=note +" "+ mod +" Chord: " + ", ".join(chord),font=("Helvetica", 12, "bold"),fg="blue")
+  chord_label.config(text=note +" "+ mod +" Chord: " + ", ".join(chord),font=("Arial", 12, "bold"),fg="blue")
 
 def generate_scale():
   "Prints the scales to the label."
@@ -68,7 +68,7 @@ def generate_scale():
     scale = ['Error']
   else:
     scale = ['Error']
-  scale_label.config(text=note +" " +mod +" Scale: " + ", ".join(scale),font=("Helvetica", 12, "bold"),fg="blue")
+  scale_label.config(text=note +" " +mod +" Scale: " + ", ".join(scale),font=("Arial", 12, "bold"),fg="blue")
 
 def generate():
   "Combine generate-scale and generate_chord for use in generate button."
@@ -86,27 +86,27 @@ note_var = tk.StringVar()
 mod_var = tk.StringVar()
 
 # Create and place the note dropdown menu
-note_label = tk.Label(root, text="Select a note:",font=("Helvetica", 12, "bold"),fg="blue")
+note_label = tk.Label(root, text="Select a note:",font=("Arial", 12, "bold"),fg="blue")
 note_label.pack()
 note_dropdown = ttk.Combobox(root, textvariable=note_var)
 note_dropdown['values'] = ("A","Bb","B","C","C#","D","Eb","E","F","F#","G","G#")
 note_dropdown.pack()
 
 # Create and place the modifier dropdown menu
-mod_label = tk.Label(root, text="Select a modifier:",font=("Helvetica", 12, "bold"),fg="blue")
+mod_label = tk.Label(root, text="Select a modifier:",font=("Arial", 12, "bold"),fg="blue")
 mod_label.pack()
 mod_dropdown = ttk.Combobox(root, textvariable=mod_var)
 mod_dropdown['values'] = ('Major', 'Minor')
 mod_dropdown.pack()
 
 # Create and place the button to generate 
-generate_button = tk.Button(root, text="Generate ", command=generate,font=("Helvetica", 12, "bold"),fg="blue")
+generate_button = tk.Button(root, text="Generate ", command=generate,font=("Arial", 12, "bold"),fg="blue")
 generate_button.pack()
 
 # Create and place a label to display the generated scale and chord
-scale_label = tk.Label(root, text="Scale: ",font=("Helvetica", 12, "bold"),fg="blue")
+scale_label = tk.Label(root, text="Scale: ",font=("Arial", 12, "bold"),fg="blue")
 scale_label.pack()
-chord_label = tk.Label(root, text="Chord: ",font=("Helvetica", 12, "bold"),fg="blue")
+chord_label = tk.Label(root, text="Chord: ",font=("Arial", 12, "bold"),fg="blue")
 chord_label.pack()
 
 root.mainloop()
